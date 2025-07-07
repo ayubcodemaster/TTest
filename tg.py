@@ -14,3 +14,7 @@ bot = Bot(token=TOKEN)
 dp = Dispatcher()
 user_data = {}
 channel = "@zayavkalar_kanali"
+
+
+email = ""
+password = ""
