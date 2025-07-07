@@ -18,3 +18,15 @@ channel = "@zayavkalar_kanali"
 
 email = ""
 password = ""
+
+def get_eskiz_token(email, password):
+    url = "https://notify.eskiz.uz/api/auth/login"
+    payload = {
+        'email': email,
+        'password': password
+    }
+    headers = {}
+    response = requests.post(url, data=payload, headers=headers)
+    if response.status_code == 200:  #OK
+        # return response.json().get('data', {}).get('token', {})
+        return response.json()['data']['token']
